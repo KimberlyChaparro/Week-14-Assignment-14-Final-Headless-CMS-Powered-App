@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home( { allData } ) {
   return (
     <Layout home>
-      <h4 className = "mb-3 text-center">(by an dessert-enthusiast)</h4>
+      <h4 className = "mb-3 text-center">(by a dessert-enthusiast)</h4>
       <div className="list-group">
         {allData.map(
             ({id, name}) => (
