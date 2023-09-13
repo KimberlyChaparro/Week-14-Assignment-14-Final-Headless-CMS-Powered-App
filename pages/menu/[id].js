@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export default function DessertEntry( { itemData } ) {
   return (
     <Layout>
-      <article className="card col-6">
+      <article className="card col-6 margin-auto">
         <div className="card-body">
           <h5 className="card-title">{itemData.dessert1}</h5>
           <h5 className="card-title">{itemData.dessert2}</h5>

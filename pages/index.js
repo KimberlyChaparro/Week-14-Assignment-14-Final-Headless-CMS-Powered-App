@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home( { allData } ) {
   return (
     <Layout home>
-      <h1>My Favorite Sonoma County Italian Restaurants with Dessert Menu</h1>
+      <h4 className = "mb-3 text-center">(by an dessert-enthusiast)</h4>
       <div className="list-group">
         {allData.map(
             ({id, name}) => (

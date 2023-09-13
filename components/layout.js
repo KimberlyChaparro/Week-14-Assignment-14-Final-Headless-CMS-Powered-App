@@ -3,16 +3,15 @@ import Link from 'next/link';
 
 export default function Layout( {children, home} ) {
   return(
-    <div>
+    <div className = "text-center">
       <Head>
         <title>Basic Next.js App</title>
       </Head>
       <header>
-        <nav>
-          <a href="https://www.santarosa.edu">Visit SRJC</a>
-        </nav>
+      <h1>Best Sonoma County Italian Restaurants</h1>
+        <h2>(selected by their dessert menus)</h2>
       </header>
-      <main>
+      <main className = "col-6 margin-auto">
         {children}
       </main>
       {!home && (
@@ -21,8 +20,8 @@ export default function Layout( {children, home} ) {
         </Link>
         )
       }
-      <footer>
-        <p>the footer</p>
+      <footer className="mt-3 link-primary">
+        <a href="https://www.sonomacounty.com/articles/best-italian-restaurants-sonoma-county">Read about the best Italian resturants in Sonoma County here</a>
       </footer>
     </div>
   );
