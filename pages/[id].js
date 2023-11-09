@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
 // define a getStaticPaths() function to tell next.js all valid URLs: 1,2,3,4 
 // - this name is defined by next.js
 export async function getStaticPaths() {
-  const paths = getAllIds();
+  const paths = await getAllIds();
   return {
     paths,
     fallback: false
@@ -29,11 +29,13 @@ export default function Entry({ itemData }) {
     <Layout>
       <article className="card text-center mt-3">
         <div className="card-body">
-          <h5 className="card-title">{itemData.name}</h5>
-          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.phone}</h6>
+          <h5>Post Author:</h5>
+          <h5 className="card-title">{itemData.post_author}</h5>
+          <h6>Post Status:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.post_status}</h6>
           <a href="#" className="card-link link-primary">{itemData.website}</a>
           <div className="mt-3">
-            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.id}`} className="list-group-item list-group-item-action">Preview their Dessert Menu</Link></button>
+            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.ID}`} className="list-group-item list-group-item-action">Date details</Link></button>
           </div>
         </div>
       </article>
