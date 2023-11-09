@@ -6,10 +6,8 @@ import { getSortedList } from '../lib/data';
 export async function getStaticProps() {
   const allData = await getSortedList();
   return {
-    props: {
-      allData
-    }
-  }
+    props: { allData }
+  };
 }
 
 // export our home page component Home
