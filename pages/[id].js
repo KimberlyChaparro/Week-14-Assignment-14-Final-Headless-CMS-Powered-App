@@ -4,7 +4,7 @@ import { getAllIds, getData } from '../lib/data';
 
 // define a getStaticProps() function to have next.js retrieve data to use for the dynamic page
 // - this name is defined by next.js
-export async function getStaticProps( { params } ) {
+export async function getStaticProps({ params }) {
   const itemData = await getData(params.id);
   return {
     props: {
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 }
 
 // export our dynamically routed page component Entry
-export default function Entry( { itemData } ) {
+export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card text-center mt-3">
@@ -32,9 +32,9 @@ export default function Entry( { itemData } ) {
           <h5 className="card-title">{itemData.name}</h5>
           <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.phone}</h6>
           <a href="#" className="card-link link-primary">{itemData.website}</a>
-          <div className = "mt-3">
-          <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.id}`} className="list-group-item list-group-item-action">Preview their Dessert Menu</Link></button>
-            </div>
+          <div className="mt-3">
+            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.id}`} className="list-group-item list-group-item-action">Preview their Dessert Menu</Link></button>
+          </div>
         </div>
       </article>
     </Layout>
