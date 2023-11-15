@@ -29,13 +29,13 @@ export default function Entry({ itemData }) {
     <Layout>
       <article className="card text-center mt-3">
         <div className="card-body">
-          <h5>Post Author:</h5>
-          <h5 className="card-title">{itemData.post_author}</h5>
-          <h6>Post Status:</h6>
-          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.post_status}</h6>
+          <h5>Post Title:</h5>
+          <h5 className="card-title">{itemData.post_title}</h5>
+          <h6>User Login:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
           <a href="#" className="card-link link-primary">{itemData.website}</a>
           <div className="mt-3">
-            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.ID}`} className="list-group-item list-group-item-action">Date details</Link></button>
+            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.ID}`} className="list-group-item list-group-item-action">Post Content</Link></button>
           </div>
         </div>
       </article>
