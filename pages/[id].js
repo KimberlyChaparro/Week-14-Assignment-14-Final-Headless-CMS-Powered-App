@@ -29,7 +29,7 @@ export default function Entry({ itemData }) {
     <Layout>
       <article className="card text-center mt-3">
         <div className="card-body">
-          <h5>Post Title:</h5>
+          <h5>This is the post title:</h5>
           <h5 className="card-title">{itemData.post_title}</h5>
           <h6>User Login:</h6>
           <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
