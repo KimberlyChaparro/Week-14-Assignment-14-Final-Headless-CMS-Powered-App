@@ -1,10 +1,10 @@
 import Layout from '../../../components/layout';
-import { getAllIds, getData } from '../../../lib/purchases_data';
+import { getNewAllIds, getNewData } from '../../../lib/purchases_data';
 
 // define a getStaticProps() function to have next.js retrieve data to use for the dynamic page
 // - this name is defined by next.js
 export async function getStaticProps({ params }) {
-  const itemData = await getData(params.id);
+  const itemData = await getNewData(params.id);
   return {
     props: {
       itemData
@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
 // define a getStaticPaths() function to tell next.js all valid URLs: 1,2,3,4 
 // - this name is defined by next.js
 export async function getStaticPaths() {
-  const paths = await getAllIds();
+  const paths = await getNewAllIds();
   return {
     paths,
     fallback: false
@@ -28,8 +28,8 @@ export default function Purchase_Info({ itemData }) {
     <Layout>
       <article className="card col-6 margin-auto">
         <div className="card-body">
-          <h5>Purchase Content</h5>
-          <div className="card-text" dangerouslySetInnerHTML={{ __html: itemData.purchase_description }}>
+          <h5>Purchase Post Content</h5>
+          <div className="card-text" dangerouslySetInnerHTML={{ __html: itemData.post_content }}>
 
           </div>
           <h5 className="card-title">{itemData.dessert2}</h5>

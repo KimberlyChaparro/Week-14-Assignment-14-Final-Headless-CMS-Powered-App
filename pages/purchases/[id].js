@@ -36,7 +36,9 @@ export default function PurchasesEntry({ itemData }) {
           <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
           <a href="#" className="card-link link-primary">{itemData.website}</a>
           <div className="mt-3">
-            <button type="button" class="btn btn-secondary"><Link href={`/purchase_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link></button>
+            <button type="button" className="btn btn-secondary">
+              <Link href={`/purchases_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link>
+            </button>
           </div>
         </div>
       </article>
