@@ -31,10 +31,12 @@ export default function PurchasesEntry({ itemData }) {
         <div className="card-body">
           <h5>This is the post title:</h5>
           <h5 className="card-title">{itemData.post_title}</h5>
+          <h6>Purchase Description:</h6>
           <h5 className="card-title">{itemData.purchase_description}</h5>
-          <h6>User Login:</h6>
-          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
-          <a href="#" className="card-link link-primary">{itemData.website}</a>
+          <h6>Purchase Date:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.purchase_date}</h6>
+          <h6>Purchase Quantity:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.purchase_total}</h6>
           <div className="mt-3">
             <button type="button" className="btn btn-secondary">
               <Link href={`/purchases_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link>
