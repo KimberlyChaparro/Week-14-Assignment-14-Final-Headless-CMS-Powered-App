@@ -1,24 +1,45 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/layout';
 import { getSortedList } from '../lib/data';
+import { getSortedPurchasesList } from '../lib/purchases_data';
 
-// define a getStaticProps() function - this name is defined by next.js
 export async function getStaticProps() {
   const allData = await getSortedList();
+  const allPurchasesData = await getSortedPurchasesList();
   return {
-    props: { allData }
+    props: {
+      allData,
+      allPurchasesData
+    }
   };
 }
-
-// export our home page component Home
-export default function Home({ allData }) {
+export default function Home({ allData, allPurchasesData }) {
   return (
     <Layout home>
-      <h4 className="mb-3 text-center">(by a dessert-enthusiast)</h4>
+      <h1>List of All Posts</h1>
       <div className="list-group">
         {allData.map(
           ({ id, name }) => (
-            <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action">
+            <Link key={id} href={`/posts/${id}`} className="list-group-item list-group-item-action">
+              {name}
+            </Link>
+          )
+        )
+        }
+      </div>
+      <h1>List of Purchases</h1>
+      {/* <div className="list-group">
+        {allPurchasesData.map(({ id, purchase_description }) => (
+          <Link key={id} href={`/purchases/${id}`}>
+            <a className="list-group-item list-group-item-action">{purchase_description}</a>
+          </Link>
+        ))}
+      </div> */}
+      <div className="list-group">
+        {allPurchasesData.map(
+          ({ id, name }) => (
+            <Link key={id} href={`/purchases/${id}`} className="list-group-item list-group-item-action">
               {name}
             </Link>
           )
