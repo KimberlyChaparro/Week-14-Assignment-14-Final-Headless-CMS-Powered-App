@@ -39,7 +39,7 @@ export default function PurchasesEntry({ itemData }) {
           <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.purchase_total}</h6>
           <div className="mt-3">
             <button type="button" className="btn btn-secondary">
-              <Link href={`/purchases_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link>
+              <Link href={`/purchases/purchases_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link>
             </button>
           </div>
         </div>
