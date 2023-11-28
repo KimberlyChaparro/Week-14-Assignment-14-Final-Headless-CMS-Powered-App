@@ -35,7 +35,7 @@ export default function Entry({ itemData }) {
           <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
           <a href="#" className="card-link link-primary">{itemData.website}</a>
           <div className="mt-3">
-            <button type="button" class="btn btn-secondary"><Link href={`/menu/${itemData.ID}`} className="list-group-item list-group-item-action">Post Content</Link></button>
+            <button type="button" class="btn btn-secondary"><Link href={`/posts/post_info/${itemData.ID}`} className="list-group-item list-group-item-action">Post Content</Link></button>
           </div>
         </div>
       </article>
