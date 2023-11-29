@@ -38,7 +38,7 @@ export default function Home({ allData, allContactsData, allPurchasesData, allRe
         )
         }
       </div>
-      <h3>List of All Contacts</h3>
+      <h3 className="mt-3">List of All Contacts</h3>
       <div className="list-group">
         {allContactsData.map(
           ({ id, name }) => (
@@ -49,7 +49,7 @@ export default function Home({ allData, allContactsData, allPurchasesData, allRe
         )
         }
       </div>
-      <h3>List of Purchases</h3>
+      <h3 className="mt-3">List of Purchases</h3>
       <div className="list-group">
         {allPurchasesData.map(
           ({ id, name }) => (
@@ -60,7 +60,7 @@ export default function Home({ allData, allContactsData, allPurchasesData, allRe
         )
         }
       </div>
-      <h3>List of Recipients</h3>
+      <h3 className="mt-3">List of Recipients</h3>
       <div className="list-group">
         {allRecipientsData.map(
           ({ id, name }) => (
@@ -71,7 +71,7 @@ export default function Home({ allData, allContactsData, allPurchasesData, allRe
         )
         }
       </div>
-      <h3>List of All Posts</h3>
+      <h3 className="mt-3">List of All Posts</h3>
       <div className="list-group">
         {allData.map(
           ({ id, name }) => (

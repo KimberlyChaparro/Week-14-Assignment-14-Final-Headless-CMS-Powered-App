@@ -5,14 +5,14 @@ export default function Layout({ children, home }) {
   return (
     <div className="text-center">
       <Head>
-        <title>Basic Next.js App</title>
+        <title>Pottery Catalog</title>
       </Head>
-      <header>
-        <h1>Final Headless CMS-Powered App</h1>
-        <h2>Purpose:</h2>
-        <p>Display lists and details for the content from at least three different custom post types, with at least three custom fields each</p>
+      <header className="mt-5">
+        <h1>Pottery Catalog</h1>
+        <h5>Form: Headless CMS-Powered App</h5>
+        <h5 className="col-6 margin-auto">Fuction: To display lists and details for the pottery catalog with content from at least three different custom post types, with at least three custom fields each</h5>
       </header>
-      <main className="col-6 margin-auto">
+      <main className="col-6 margin-auto mt-5">
         {children}
       </main>
       {!home && (
@@ -21,9 +21,9 @@ export default function Layout({ children, home }) {
         </Link>
       )
       }
-      <footer className="mt-3 link-primary">
-        <a href="https://www.sonomacounty.com/articles/best-italian-restaurants-sonoma-county">Read about the best Italian resturants in Sonoma County here</a>
+      <footer className="mt-3">
+        <p>Photography from Unsplash by <a href="https://unsplash.com/@heftiba" target="_blank" className="bg-body-secondary">Toa Heftiba</a>, <a href="https://unsplash.com/@molnj" target="_blank" className="bg-body-secondary">Jocelyn Morales</a>, and <a href="https://unsplash.com/@khloephoto" target="_blank" className="bg-body-secondary">Khloe Arledge</a></p>
       </footer>
-    </div>
+    </div >
   );
 }
