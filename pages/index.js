@@ -38,22 +38,22 @@ export default function Home({ allData, allContactsData, allPurchasesData, allRe
         )
         }
       </div>
-      <h3 className="mt-3">List of All Contacts</h3>
+      <h3 className="mt-3">List of Purchases</h3>
       <div className="list-group">
-        {allContactsData.map(
+        {allPurchasesData.map(
           ({ id, name }) => (
-            <Link key={id} href={`/contacts/${id}`} className="list-group-item list-group-item-action">
+            <Link key={id} href={`/purchases/${id}`} className="list-group-item list-group-item-action">
               {name}
             </Link>
           )
         )
         }
       </div>
-      <h3 className="mt-3">List of Purchases</h3>
+      <h3 className="mt-3">List of Contacts</h3>
       <div className="list-group">
-        {allPurchasesData.map(
+        {allContactsData.map(
           ({ id, name }) => (
-            <Link key={id} href={`/purchases/${id}`} className="list-group-item list-group-item-action">
+            <Link key={id} href={`/contacts/${id}`} className="list-group-item list-group-item-action">
               {name}
             </Link>
           )
