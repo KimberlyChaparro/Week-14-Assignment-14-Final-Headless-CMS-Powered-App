@@ -31,6 +31,12 @@ export default function ContactEntry({ itemData }) {
         <div className="card-body">
           <h5>This is the post title:</h5>
           <h5 className="card-title">{itemData.post_title}</h5>
+          <h6>First Name:</h6>
+          <h5 className="card-title">{itemData.first_name}</h5>
+          <h6>Last Name:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.last_name}</h6>
+          <h6>Email:</h6>
+          <h6 className="card-subtitle mb-2 text-body-secondary">{itemData.email}</h6>
           <div className="mt-3">
             <button type="button" class="btn btn-secondary"><Link href={`/contacts/contacts_info/${itemData.id}`} className="list-group-item list-group-item-action">Post Content</Link></button>
           </div>
