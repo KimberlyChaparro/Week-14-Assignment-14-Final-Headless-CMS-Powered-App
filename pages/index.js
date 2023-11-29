@@ -17,7 +17,7 @@ export async function getStaticProps() {
 export default function Home({ allData, allPurchasesData }) {
   return (
     <Layout home>
-      <h1>List of All Posts</h1>
+      <h3>List of All Posts</h3>
       <div className="list-group">
         {allData.map(
           ({ id, name }) => (
@@ -28,7 +28,7 @@ export default function Home({ allData, allPurchasesData }) {
         )
         }
       </div>
-      <h1>List of Purchases</h1>
+      <h3>List of Purchases</h3>
       {/* <div className="list-group">
         {allPurchasesData.map(({ id, purchase_description }) => (
           <Link key={id} href={`/purchases/${id}`}>
